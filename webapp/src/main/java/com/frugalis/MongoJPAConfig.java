@@ -61,6 +61,5 @@ public class MongoJPAConfig extends AbstractMongoConfiguration {
 		allCred.add(MongoCredential.createCredential(username, database, password.toCharArray()));
 		MongoClient client = new MongoClient((new ServerAddress(host, Integer.parseInt(port))), allCred);
 		client.setWriteConcern(WriteConcern.ACKNOWLEDGED);
-
 		return client;
 	}} 
